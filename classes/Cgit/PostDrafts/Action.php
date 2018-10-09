@@ -190,9 +190,7 @@ class Action
     private function createDraft()
     {
         $this->draft->create();
-        wp_redirect(get_edit_post_link($this->draft->draftId(), null));
-
-        exit;
+        $this->redirect($this->draft->editDraftUrl());
     }
 
     /**
@@ -203,6 +201,7 @@ class Action
     private function deleteDraft()
     {
         $this->draft->delete();
+        $this->redirect($this->draft->editPostUrl());
     }
 
     /**
@@ -213,5 +212,18 @@ class Action
     private function publishDraft()
     {
         $this->draft->publish();
+        $this->redirect($this->draft->editPostUrl());
+    }
+
+    /**
+     * Redirect to URL
+     *
+     * @param string $url
+     * @return void
+     */
+    private function redirect($url)
+    {
+        wp_redirect($url, null);
+        exit;
     }
 }
