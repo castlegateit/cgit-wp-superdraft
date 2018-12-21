@@ -1,4 +1,4 @@
-# Castlegate IT WP Post Drafts
+# Castlegate IT WP Super Draft
 
 Basic revision control for WordPress posts, pages, and custom post types, allowing users to create unpublished draft versions of published posts. When editing a post, users will be provided with a "create draft version" button, which creates a duplicate version of the post with draft status.
 
