@@ -109,7 +109,7 @@ class SuperPost
      */
     public function edit()
     {
-        return get_edit_post_link($this->post);
+        return get_edit_post_link($this->post, null);
     }
 
     /**
@@ -198,8 +198,8 @@ class SuperPost
         // identify their published or draft versions. These should not be
         // imported when merging one into the other.
         $exclude = [
-            Plugin::POST_META_KEY,
-            Plugin::DRAFT_META_KEY,
+            Plugin::POST_META_KEY => null,
+            Plugin::DRAFT_META_KEY => null,
         ];
 
         $post1 = $source->id();

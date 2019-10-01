@@ -28,6 +28,7 @@ class Admin
         add_action('current_screen', [$this, 'insertDraftAdminNotice']);
         add_action('edit_form_before_permalink', [$this, 'insertDraftEditPermalinkSiblingElement']);
 
+        add_filter('page_row_actions', [$this, 'insertPostRowAction'], 10, 2);
         add_filter('post_row_actions', [$this, 'insertPostRowAction'], 10, 2);
         add_filter('display_post_states', [$this, 'insertPostState'], 10, 2);
     }
