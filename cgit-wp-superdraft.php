@@ -5,7 +5,7 @@
 Plugin Name: Castlegate IT WP Super Draft
 Plugin URI: https://github.com/castlegateit/cgit-wp-superdraft
 Description: Post drafts with editorial review and approval.
-Version: 1.0
+Version: 1.0.0
 Author: Castlegate IT
 Author URI: https://www.castlegateit.co.uk/
 Network: true
